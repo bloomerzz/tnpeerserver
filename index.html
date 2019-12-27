@@ -28,6 +28,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.18/peer.min.js"></script>
 <script>
 
+   
+var http_request;
+http_request = new XMLHTTPRequest();
+http_request.onreadystatechange = function () { /* .. */ };
+http_request.open("POST", "https://tnpeerproject.herokuapp.com");
+http_request.withCredentials = true;
+http_request.setRequestHeader("Content-Type", "application/json");
+http_request.send({ 'request': "authentication token" });
+
+
     // Create random id for everyone
     function guid() {
         function s4() {
