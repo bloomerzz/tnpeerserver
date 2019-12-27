@@ -24,7 +24,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="peer.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.18/peer.min.js"></script>
 <script>
 
     // Create random id for everyone
@@ -39,11 +40,11 @@
                 s4() + '-' + s4() + s4() + s4();
     }
 
-    var id = guid();
+    var id = 1234567890;
     // Initialize a new peer and connect to our server
     var peer = new Peer(id, {
         host: 'tnpeerproject.herokuapp.com',
-        port: 9000,
+        port: 443,
         secure: true,
         debug: 1
     });
